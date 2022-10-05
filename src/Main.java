@@ -1,5 +1,7 @@
 public class Main {
     public static void main(String[] args) {
+
+        //Домашнее задание 1
         //Задание 1
         int salary = 15_000;
         int total = 0;
@@ -33,8 +35,18 @@ public class Main {
             populationGrowth = (population / 1000) * (born - dead);
             population = population + populationGrowth;
             year = year + 1;
-            System.out.println(populationGrowth);
             System.out.println("Год " + year + " числинность населения состовляет " + population);
+        }
+        System.out.println("");
+
+        //Домашнее задание 2
+        //Задание 1
+        float deposit = 15000f;
+        int month = 0;
+        while ( deposit < 12_000_000 ){
+            deposit = deposit + deposit / 100 * 7;
+            month = month + 1;
+            System.out.println("Месяц " + month + " ,сумма накопления = " + deposit + " рублей.");
         }
 
 
