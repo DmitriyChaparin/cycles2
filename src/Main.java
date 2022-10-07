@@ -44,7 +44,7 @@ public class Main {
         float deposit = 15000f;
         int month = 0;
         while (deposit < 12_000_000) {
-            deposit = deposit + deposit / 100 * 7;
+            deposit += deposit / 100 * 7;
             month = month + 1;
             //System.out.println("Месяц " + month + " ,сумма накопления = " + deposit + " рублей.");
 
@@ -59,10 +59,10 @@ public class Main {
         float deposit1 = 15000f;
         int month1 = 0;
         int accumulationPeriod = 9 * 12; // срок вклада
-        while (deposit1 < 999999999) {
-            deposit1 = deposit1 + deposit1 / 100 * 7;
+        while (month1 <= accumulationPeriod) {
+            deposit1 += deposit1 / 100 * 7;
             month1 = month1 + 1;
-            if (month1 % 6 == 0 && month1 <= accumulationPeriod)
+            if (month1 % 6 == 0)
                 System.out.println("Месяц " + month1 + " ,сумма накопления = " + deposit1 + " рублей.");
         }
         System.out.println("");
@@ -79,19 +79,18 @@ public class Main {
         int thisYears = 2022;
         int before = thisYears - 200;
         int after = thisYears + 100;
-        for (int years = 0; years < 12000; years += 79) {
-            if (years >= before && years <= after)
+        for (int years = 0; years < after; years += 79) {
+            if (years > before) {
                 System.out.println(years);
+            }
         }
         System.out.println("");
 
         //Задание 2
         int a = 2;
         int b = 1;
-        int c = 0;
-        for (; c < 20; b++) {
-            c = a * b;
-            System.out.println(a + "*" + b + "=" + c);
+        for (; b <= 10; b++) {
+            System.out.println(a + "*" + b + "=" + a * b);
         }
         System.out.println("");
 
